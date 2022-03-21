@@ -1,6 +1,9 @@
 #This is the updated version of my Curve Calculator program
+"""ALL curvature calculations are done by NASA's documentation of the Earth's curvature per mile (8 Inches per Mile)"""
+
 
 #curve Calculator
+"""This function's purpose is to calculate the earth's curvature at a pre-defined distance from the observer; assuming that the observer is at sea-level."""
 def Curve_Calculator():
     First_input = input("Inches of curvature or Feet or Miles?: ")
     if First_input.lower() == "inches":
@@ -16,7 +19,10 @@ def Curve_Calculator():
         Expected_curve_miles = ((8 * (num1**2)) / 12) / 5280
         print("Expected Curve: " + str(Expected_curve_miles) + " Miles")
         
-        
+
+#Missing Blockage calculator
+"""This function is for finding out how much land/water that should be blocking the observer's line-of-sight at a pre-defined distance.
+This takes into account the Observer's height, the height of the object/building, and the distance."""
 def Missing_Blockage():
     First_input = input("In Inches, Feet or Miles of Blockage?: ")
     if First_input.lower() == "inches":
